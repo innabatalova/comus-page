@@ -1,11 +1,20 @@
+/* ==========================================================================
+   Дизайн-токены: шрифты, цвета, типографические шкалы
+   Переменные с суффиксом -mobile — базовые (mobile-first),
+   версии без суффикса подключаются в style.css от min-width: 768px.
+   ========================================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+    /* Базовый размер шрифта */
     --font-size: 1rem;
 
+    /* Семейства шрифтов */
     --primary-font: "Montserrat", Arial, sans-serif;
     --secondary-font: "Fira Sans", Arial, sans-serif;
 
+    /* Цвета */
     --primary-text: #363A47;
     --blue-light: #1390DF;
     --white: #FFFFFF;
@@ -14,40 +23,44 @@
     --grey-pale: #F9FBFF;
     --red-dark: #DA1F2A;
 
-    --font-h1: 600 2rem/2.5rem var(--primary-font);
-    --font-h2: 600 1.625rem/2rem var(--primary-font);
-    --font-h4: 700 1rem/1.375rem var(--primary-font);
-    --font-h5: 700 .875rem/1.125rem var(--primary-font);
-
+    /* Типографика — мобильная версия (база) */
     --font-h1-mobile: 700 1.375rem/1.875rem var(--primary-font);
     --font-h2-mobile: 700 1.125rem/1.5rem var(--primary-font);
-
     --font-info-mobile: 400 .8125rem/.9375rem var(--secondary-font);
     --font-btn-mobile: 500 1rem/1.375rem var(--secondary-font);
     --font-text-mobile: 400 .875rem/1.25rem var(--secondary-font);
     --font-popup-mobile: 500 1.125rem/1.375rem var(--secondary-font);
+
+    /* Типографика — от 768px и шире */
+    --font-h1: 600 2rem/2.5rem var(--primary-font);
+    --font-h2: 600 1.625rem/2rem var(--primary-font);
+    --font-h4: 700 1rem/1.375rem var(--primary-font);
+    --font-h5: 700 .875rem/1.125rem var(--primary-font);
 }
 
-/* Шрифты */
+/* ==========================================================================
+   Утилитарные классы начертаний
+   ========================================================================== */
+
 .montserrat-bold {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    font-optical-sizing: auto;
 }
 
 .montserrat-semibold {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+    font-optical-sizing: auto;
 }
 
 .montserrat-regular {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-optical-sizing: auto;
 }
 
 .fira-regular {

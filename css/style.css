@@ -1,3 +1,23 @@
+/* ==========================================================================
+   Комус — «Оставьте свой отзыв»
+   Вёрстка mobile-first: базовые стили описывают мобильную версию,
+   расширения подключаются через min-width (768px → 1000px).
+
+   Порядок объявлений внутри правила единый:
+   1. Позиционирование      position, top/right/bottom/left, z-index
+   2. Отображение и раскладка   display, flex/grid, gap, align/justify
+   3. Размеры и отступы     width, height, margin, padding, overflow
+   4. Типографика           font, color, text-*, list-style, word-break
+   5. Оформление            background, border, radius, shadow, opacity, clip-path
+   6. Поведение и анимация  transform, transition, animation, cursor, user-select
+
+   Вендорные префиксы объявляются перед стандартным свойством.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Базовые стили
+   ========================================================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -5,8 +25,8 @@
 body {
     position: relative;
     min-width: 20rem;
-    background-color: var(--primary-color);
     margin: 0;
+    background-color: var(--primary-color);
 }
 
 h1,
@@ -27,16 +47,34 @@ section:not(.cta_bottom) {
     margin-bottom: 1.5rem;
 }
 
+/* ==========================================================================
+   2. Контейнер
+   ========================================================================== */
+
 .container {
     max-width: 87.2%;
     margin: auto;
 }
+
+/* ==========================================================================
+   3. Типографика
+   ========================================================================== */
 
 .h1-title {
     margin-bottom: .5rem;
     font: var(--font-h1-mobile);
     color: var(--primary-text);
 }
+
+.h2-title {
+    margin-bottom: .75rem;
+    font: var(--font-h2-mobile);
+    color: var(--primary-text);
+}
+
+/* ==========================================================================
+   4. Блок «hero»
+   ========================================================================== */
 
 .hero {
     position: relative;
@@ -51,25 +89,21 @@ section:not(.cta_bottom) {
     position: absolute;
     width: 375px;
     height: 143px;
-    clip-path: path("M313.934 -379.924C377.345 -343.011 428.76 -288.808 451.666 -219.092C475.493 -146.573 475.232 -66.3704 439.042 0.853085C402.46 68.8063 336.19 116.888 261.141 134.817C189.145 152.016 105.72 143.9 51.6051 93.409C3.27022 48.3106 36.563 -31.2252 15.8795 -94.0223C-6.67331 -162.495 -90.3033 -212.695 -72.2042 -282.488C-52.7835 -357.378 26.2121 -404.172 101.216 -423.098C174.154 -441.502 248.933 -417.763 313.934 -379.924Z");
     background-color: var(--grey-light);
+    -webkit-clip-path: path("M313.934 -379.924C377.345 -343.011 428.76 -288.808 451.666 -219.092C475.493 -146.573 475.232 -66.3704 439.042 0.853085C402.46 68.8063 336.19 116.888 261.141 134.817C189.145 152.016 105.72 143.9 51.6051 93.409C3.27022 48.3106 36.563 -31.2252 15.8795 -94.0223C-6.67331 -162.495 -90.3033 -212.695 -72.2042 -282.488C-52.7835 -357.378 26.2121 -404.172 101.216 -423.098C174.154 -441.502 248.933 -417.763 313.934 -379.924Z");
+    clip-path: path("M313.934 -379.924C377.345 -343.011 428.76 -288.808 451.666 -219.092C475.493 -146.573 475.232 -66.3704 439.042 0.853085C402.46 68.8063 336.19 116.888 261.141 134.817C189.145 152.016 105.72 143.9 51.6051 93.409C3.27022 48.3106 36.563 -31.2252 15.8795 -94.0223C-6.67331 -162.495 -90.3033 -212.695 -72.2042 -282.488C-52.7835 -357.378 26.2121 -404.172 101.216 -423.098C174.154 -441.502 248.933 -417.763 313.934 -379.924Z");
 }
 
 .hero__img {
-    text-align: center;
     margin-bottom: .6875rem;
+    text-align: center;
 }
 
 .hero__pic img {
     position: relative;
+    z-index: 5;
     width: 11.5rem;
     height: auto;
-    z-index: 5;
-}
-
-.hero__info__img img {
-    width: 1.5rem;
-    height: 1.5rem;
 }
 
 .hero__pic__fly {
@@ -79,31 +113,36 @@ section:not(.cta_bottom) {
 .hero__pic__fly_like {
     top: 17px;
     left: 37px;
+    z-index: 6;
     width: 41px;
     height: 41px;
-    z-index: 6;
 }
 
 .hero__pic__fly_rating {
     top: 96px;
     right: 47px;
+    z-index: 6;
     width: 57px;
     height: 57px;
-    z-index: 6;
 }
 
 .hero__pic__fly_ruble-coin {
     top: 43px;
     left: 100px;
+    z-index: 6;
     width: 70px;
     height: 70px;
-    z-index: 6;
 }
 
 .hero__info {
     display: flex;
     align-items: center;
     gap: .375rem;
+}
+
+.hero__info__img img {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .hero__info__text {
@@ -113,11 +152,9 @@ section:not(.cta_bottom) {
     text-decoration: none;
 }
 
-.h2-title {
-    margin-bottom: .75rem;
-    font: var(--font-h2-mobile);
-    color: var(--primary-text);
-}
+/* ==========================================================================
+   5. Блок «instructions»
+   ========================================================================== */
 
 .instructions__cards {
     display: flex;
@@ -140,13 +177,13 @@ section:not(.cta_bottom) {
     position: absolute;
     top: 0;
     left: 0;
-    width: 2rem;
-    height: 2rem;
     display: grid;
     place-items: center;
-    border-radius: 50%;
-    background-color: var(--red-dark);
+    width: 2rem;
+    height: 2rem;
     color: var(--white);
+    background-color: var(--red-dark);
+    border-radius: 50%;
 }
 
 .instructions__pic,
@@ -163,18 +200,22 @@ section:not(.cta_bottom) {
     color: var(--primary-text);
 }
 
+/* ==========================================================================
+   6. Блок «cta»
+   ========================================================================== */
+
 .cta__wrapper {
     display: flex;
     flex-direction: column;
     padding: 1.25rem;
-    border-radius: .5rem;
     background-color: var(--grey);
+    border-radius: .5rem;
 }
 
 .cta__title {
-    text-align: center;
     font-size: 1rem;
     line-height: 1.375rem;
+    text-align: center;
 }
 
 .cta__button {
@@ -182,18 +223,26 @@ section:not(.cta_bottom) {
     place-items: center;
     height: 42px;
     padding: .375rem;
-    border: 2px solid var(--red-dark);
-    outline: none;
-    border-radius: .375rem;
-    background-color: var(--red-dark);
-    color: var(--white);
     font: var(--font-btn-mobile);
+    color: var(--white);
+    background-color: var(--red-dark);
+    border: 2px solid var(--red-dark);
+    border-radius: .375rem;
+    outline: none;
     cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
+/* Порядок псевдоклассов: :hover → :focus → :active (правило LVHA) */
 .cta__button:hover {
     background-color: #BC1B24;
     border: 2px solid #BC1B24;
+}
+
+.cta__button:focus {
+    background-color: #C53038;
+    border: 2px solid #EA8D93;
 }
 
 .cta__button:active {
@@ -201,10 +250,9 @@ section:not(.cta_bottom) {
     border: 2px solid #C53038;
 }
 
-.cta__button:focus {
-    background-color: #C53038;
-    border: 2px solid #EA8D93;
-}
+/* ==========================================================================
+   7. Блок «need»
+   ========================================================================== */
 
 .need__cards {
     display: flex;
@@ -216,8 +264,8 @@ section:not(.cta_bottom) {
     display: flex;
     flex-direction: column;
     padding: 1.25rem;
-    border-radius: 1rem;
     background-color: var(--grey);
+    border-radius: 1rem;
 }
 
 .need__img {
@@ -239,6 +287,10 @@ section:not(.cta_bottom) {
     color: var(--primary-text);
 }
 
+/* ==========================================================================
+   8. Блок «faq»
+   ========================================================================== */
+
 .faq__wrapper {
     display: flex;
     flex-direction: column;
@@ -247,18 +299,8 @@ section:not(.cta_bottom) {
 
 .faq__details {
     padding: .875rem;
-    border-radius: .375rem;
     background-color: var(--grey-pale);
-}
-
-.faq__content {
-    font: var(--font-text-mobile);
-    color: var(--primary-text);
-    animation: fadeIn 0.4s ease-out;
-}
-
-.faq__content ul {
-    padding-left: 1rem;
+    border-radius: .375rem;
 }
 
 .faq__subtitle {
@@ -266,43 +308,64 @@ section:not(.cta_bottom) {
     justify-content: space-between;
     align-items: center;
     margin-bottom: .5rem;
+    font: var(--font-h4);
+    color: var(--primary-text);
     list-style: none;
     cursor: pointer;
     -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
-    font: var(--font-h4);
-    color: var(--primary-text);
-}
-
-.faq__subtitle:focus-visible {
-    outline: none;
 }
 
 .faq__subtitle::-webkit-details-marker {
     display: none;
 }
 
+.faq__subtitle:focus-visible {
+    outline: none;
+}
+
+.faq__content {
+    font: var(--font-text-mobile);
+    color: var(--primary-text);
+    -webkit-animation: fadeIn 0.4s ease-out;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.faq__content ul {
+    padding-left: 1rem;
+}
+
 .faq__icon {
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+    -webkit-transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
 }
 
 .faq__details[open] .faq__icon {
+    -webkit-transform: rotate(0);
     transform: rotate(0);
 }
+
+/* ==========================================================================
+   9. Блок «popup» (мобильная версия — шторка снизу)
+   ========================================================================== */
 
 .popup {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 1000;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -325,17 +388,34 @@ section:not(.cta_bottom) {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
     width: 100%;
     padding: 1.25rem 1.5rem 0;
+    background-color: var(--white);
     border-radius: 1.25rem 1.25rem 0 0;
     box-shadow: 0 -0.625rem 1.5625rem rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateY(100%);
     transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .popup--open .popup__body {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
+}
+
+.popup__close {
+    position: relative;
+    top: -0.5rem;
+    align-self: center;
+    width: 135px;
+    height: 5px;
+    border: none;
+    border-radius: 6.25rem;
+}
+
+.popup__close svg {
+    display: none;
 }
 
 .popup__title {
@@ -353,90 +433,48 @@ section:not(.cta_bottom) {
     overflow-wrap: break-word;
 }
 
-.popup__close {
-    position: relative;
-    top: -0.5rem;
-    align-self: center;
-    width: 135px;
-    height: 5px;
-    border-radius: 6.25rem;
-    border: none;
-
-}
-
-.popup__close svg {
-    display: none;
-}
-
-
-
-@media screen and (min-width: 1000px) {
-    .container {
-        max-width: 61.5rem;
-    }
-
-    .instructions__cards {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1.5rem;
-    }
-
-    .instructions__card {
-        flex-direction: column;
-        justify-content: normal;
-        gap: .75rem;
-    }
-
-    .instructions__number {
-        top: auto;
-        bottom: 0;
-        width: 1.875rem;
-        height: 1.875rem;
-    }
-
-    .instructions__img {
-        padding: 0 4.0625rem 0 1.875rem;
-    }
-
-    .instructions__pic,
-    .instructions__pic img {
-        width: 8.3125rem;
-        height: auto;
-    }
-
-    .instructions__text {
-        max-width: 100%;
-    }
-}
+/* ==========================================================================
+   10. Планшет и выше — min-width: 768px
+   ========================================================================== */
 
 @media screen and (min-width: 768px) {
+
+    /* Базовые стили */
     section:not(.cta_bottom) {
         margin-bottom: 3rem;
     }
 
+    /* Типографика */
+    .h1-title {
+        font: var(--font-h1);
+    }
+
+    .h2-title {
+        margin-bottom: 1.5rem;
+        font: var(--font-h2);
+    }
+
+    /* Блок «hero» */
     .hero {
-        position: relative;
         background-color: inherit;
     }
 
     .hero__container {
+        position: relative;
         padding: 18px 48px;
+        overflow: hidden;
         background-color: var(--grey-pale);
     }
 
     .hero__poligon {
+        top: 0;
         right: calc((100vw - 61.5rem) / 2);
         bottom: 0;
-        top: 0;
+        z-index: 2;
         width: 398px;
         height: auto;
+        -webkit-clip-path: path("M388.683 -340.924C452.093 -304.011 503.508 -249.808 526.414 -180.092C550.241 -107.573 549.98 -27.3704 513.79 39.8531C477.208 107.806 410.938 155.888 335.889 173.817C263.893 191.016 180.468 182.9 126.353 132.409C78.0185 87.3106 111.311 7.77477 90.6278 -55.0223C68.075 -123.495 -15.555 -173.695 2.54411 -243.488C21.9648 -318.378 100.96 -365.172 175.965 -384.098C248.902 -402.502 323.682 -378.763 388.683 -340.924Z");
         clip-path: path("M388.683 -340.924C452.093 -304.011 503.508 -249.808 526.414 -180.092C550.241 -107.573 549.98 -27.3704 513.79 39.8531C477.208 107.806 410.938 155.888 335.889 173.817C263.893 191.016 180.468 182.9 126.353 132.409C78.0185 87.3106 111.311 7.77477 90.6278 -55.0223C68.075 -123.495 -15.555 -173.695 2.54411 -243.488C21.9648 -318.378 100.96 -365.172 175.965 -384.098C248.902 -402.502 323.682 -378.763 388.683 -340.924Z");
-        z-index: 2;
-    }
-
-    .hero__container {
-        position: relative;
-        overflow: hidden;
     }
 
     .hero__img {
@@ -451,44 +489,35 @@ section:not(.cta_bottom) {
 
     .hero__pic__fly_like {
         top: 98px;
-        left: auto;
         right: 314px;
+        left: auto;
+        z-index: 6;
         width: 41px;
         height: 41px;
-        z-index: 6;
     }
 
     .hero__pic__fly_rating {
         top: 92px;
         right: 63px;
+        z-index: 6;
         width: 45px;
         height: 45px;
-        z-index: 6;
     }
 
     .hero__pic__fly_ruble-coin {
         top: 43px;
         right: 204px;
         left: auto;
+        z-index: 6;
         width: 70px;
         height: 70px;
-        z-index: 6;
-    }
-
-    .h1-title {
-        font: var(--font-h1);
     }
 
     .hero__title {
         width: 70%;
     }
 
-    .h2-title {
-        margin-bottom: 1.5rem;
-        font: var(--font-h2);
-    }
-
-
+    /* Блок «instructions» */
     .instructions__img {
         width: 18%;
     }
@@ -497,6 +526,7 @@ section:not(.cta_bottom) {
         width: 80%;
     }
 
+    /* Блок «cta» */
     .cta__wrapper {
         flex-direction: row;
         justify-content: center;
@@ -513,6 +543,7 @@ section:not(.cta_bottom) {
         padding: .625rem 1.25rem;
     }
 
+    /* Блок «need» */
     .need__cards {
         flex-direction: row;
         justify-content: space-between;
@@ -530,91 +561,64 @@ section:not(.cta_bottom) {
         height: 2.5rem;
     }
 
-    .need__text {
-        line-height: 1.125rem;
-    }
-
     .need__subtitle {
         margin-bottom: .25rem;
     }
 
+    .need__text {
+        line-height: 1.125rem;
+    }
+
+    /* Блок «faq» */
     .faq__wrapper {
         gap: .75rem;
     }
 
     .faq__subtitle {
-        line-height: 1.25rem;
-    }
-
-    .faq__subtitle {
         line-height: 1.125rem;
     }
 
+    /* Блок «popup» — на десктопе центрируется модальным окном */
     .popup {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1000;
-        display: flex;
         align-items: center;
-        justify-content: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    .popup--open {
-        opacity: 1;
-        visibility: visible;
     }
 
     .popup__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-color: rgb(54 58 71 / 70%);
-        cursor: pointer;
     }
 
     .popup__body {
-        position: relative;
-        background-color: #ffffff;
         width: 90%;
         max-width: 630px;
         padding: 24px;
         border-radius: 12px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        -webkit-transform: translateY(20px);
         transform: translateY(20px);
+        -webkit-transition: -webkit-transform 0.3s ease;
         transition: transform 0.3s ease;
-    }
-
-    .popup--open .popup__body {
-        transform: translateY(0);
     }
 
     .popup__close {
         position: absolute;
         top: 15px;
         right: 15px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        color: #94a3b8;
-        padding: 5px;
+        align-self: baseline;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: color 0.2s ease;
-        outline: none;
-        -webkit-tap-highlight-color: transparent;
-        align-self: baseline;
         width: 32px;
         height: 32px;
+        padding: 5px;
+        color: #94a3b8;
+        background: transparent;
+        border: none;
         border-radius: 0;
+        outline: none;
+        cursor: pointer;
+        -webkit-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .popup__close svg {
@@ -637,19 +641,82 @@ section:not(.cta_bottom) {
     .popup__content p {
         margin-bottom: .5rem;
     }
-
-
 }
 
+/* ==========================================================================
+   11. Десктоп — min-width: 1000px
+   ========================================================================== */
 
-@keyframes fadeIn {
+@media screen and (min-width: 1000px) {
+
+    /* Контейнер */
+    .container {
+        max-width: 61.5rem;
+    }
+
+    /* Блок «instructions» */
+    .instructions__cards {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .instructions__card {
+        flex-direction: column;
+        justify-content: normal;
+        gap: .75rem;
+    }
+
+    .instructions__img {
+        padding: 0 4.0625rem 0 1.875rem;
+    }
+
+    .instructions__number {
+        top: auto;
+        bottom: 0;
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+
+    .instructions__pic,
+    .instructions__pic img {
+        width: 8.3125rem;
+        height: auto;
+    }
+
+    .instructions__text {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================================================
+   12. Анимации
+   ========================================================================== */
+
+@-webkit-keyframes fadeIn {
     from {
         opacity: 0;
+        -webkit-transform: translateY(-5px);
         transform: translateY(-5px);
     }
 
     to {
         opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 }
