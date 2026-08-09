@@ -163,6 +163,73 @@ section:not(.cta_bottom) {
     color: var(--primary-text);
 }
 
+.faq__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.faq__details {
+    padding: .875rem;
+    border-radius: .375rem;
+    background-color: var(--grey-pale);
+}
+
+.faq__content {
+    font: var(--font-text-mobile);
+    color: var(--primary-text);
+    animation: fadeIn 0.4s ease-out;
+}
+
+.faq__content ul {
+    padding-left: 1rem;
+}
+
+.faq__subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    list-style: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    font: var(--font-h4);
+    color: var(--primary-text);
+}
+
+.faq__subtitle:focus-visible {
+    outline: none;
+    /* Убирает стандартную рамку и подсветку */
+}
+
+.faq__subtitle::-webkit-details-marker {
+    display: none;
+}
+
+.faq__icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.faq__details[open] .faq__icon {
+    transform: rotate(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
 
 
 
@@ -271,6 +338,18 @@ section:not(.cta_bottom) {
 
     .need__subtitle {
         margin-bottom: .25rem;
+    }
+
+    .faq__wrapper {
+        gap: .75rem;
+    }
+
+    .faq__subtitle {
+        line-height: 1.25rem;
+    }
+
+    .faq__subtitle {
+        line-height: 1.125rem;
     }
 
 
