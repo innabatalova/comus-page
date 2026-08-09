@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -13,7 +14,7 @@
 <body>
     <section class="hero">
         <div class="container">
-            <div class="hero__title">Дарим 30 ₽ на баланс мобильного телефона за ваш отзыв</div>
+            <div class="hero__title h1-title">Дарим 30 ₽ на баланс мобильного телефона за ваш отзыв</div>
             <div class="hero__info">
                 <picture class="hero__info__img"></picture>
                 <span class="hero__info__text">Условия проведения акции «Оставьте свой отзыв»</span>
@@ -23,27 +24,65 @@
 
     <section class="instructions">
         <div class="container">
-            <h2 class="hero__title"></h2>
-            <div class="hero__cards">
-                <div class="hero__card">
-                    <div class="hero__number">1</div>
-                    <picture class="hero__img"></picture>
-                    <p class="hero__text">Авторизуйтесь и перейдите в карточку купленного товара</p>
+            <h2 class="instructions__title h2-title">Как оставить отзыв</h2>
+            <div class="instructions__cards">
+                <div class="instructions__card">
+                    <div class="instructions__img">
+                        <div class="instructions__number montserrat-bold">1</div>
+                        <picture class="instructions__pic">
+                            <source media="(max-width: 1000px)" srcset="./images/img-1-mobile.webp, ./images/img-1-mobile@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(max-width: 1000px)" srcset="./images/img-1-mobile.png, ./images/img-1-mobile@2x.png 2x">
+                            <source srcset="./images/img-1.webp, ./images/img-1@2x.webp 2x" type="image/webp">
+                            <img src="./images/img-1.webp" srcset="./images/img-1@2x.webp 2x"
+                                alt="Авторизуйтесь и перейдите в карточку купленного товара" loading="lazy"
+                                decoding="async">
+                        </picture>
+                    </div>
+                    <p class="instructions__text">Авторизуйтесь и перейдите в карточку купленного товара</p>
                 </div>
-                <div class="hero__card">
-                    <div class="hero__number">2</div>
-                    <picture class="hero__img"></picture>
-                    <p class="hero__text">Кликните на вкладку «Отзывы»</p>
+                <div class="instructions__card">
+                    <div class="instructions__img">
+                        <div class="instructions__number montserrat-bold">2</div>
+                        <picture class="instructions__pic">
+                            <source media="(max-width: 1000px)" srcset="./images/img-2-mobile.webp, ./images/img-2-mobile@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(max-width: 1000px)" srcset="./images/img-2-mobile.png, ./images/img-2-mobile@2x.png 2x">
+                            <source srcset="./images/img-2.webp, ./images/img-2@2x.webp 2x" type="image/webp">
+                            <img src="./images/img-2.webp" srcset="./images/img-2@2x.webp 2x"
+                                alt="Кликните на вкладку «Отзывы»" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    <p class="instructions__text">Кликните на вкладку «Отзывы»</p>
                 </div>
-                <div class="hero__card">
-                    <div class="hero__number">3</div>
-                    <picture class="hero__img"></picture>
-                    <p class="hero__text">Нажмите «Добавить отзыв» и поделитесь мнением</p>
+                <div class="instructions__card">
+                    <div class="instructions__img">
+                        <div class="instructions__number montserrat-bold">3</div>
+                        <picture class="instructions__pic">
+                            <source media="(max-width: 1000px)" srcset="./images/img-3-mobile.webp, ./images/img-3-mobile@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(max-width: 1000px)" srcset="./images/img-3-mobile.png, ./images/img-3-mobile@2x.png 2x">
+                            <source srcset="./images/img-3.webp, ./images/img-3@2x.webp 2x" type="image/webp">
+                            <img src="./images/img-3.webp" srcset="./images/img-3@2x.webp 2x"
+                                alt="Нажмите «Добавить отзыв» и поделитесь мнением" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    <p class="instructions__text">Нажмите «Добавить отзыв» и поделитесь мнением</p>
                 </div>
-                <div class="hero__card">
-                    <div class="hero__number">4</div>
-                    <picture class="hero__img"></picture>
-                    <p class="hero__text">Через 7 рабочих дней после публикации мы начислим 30 ₽</p>
+                <div class="instructions__card">
+                    <div class="instructions__img">
+                        <div class="instructions__number montserrat-bold">4</div>
+                        <picture class="instructions__pic">
+                            <source media="(max-width: 1000px)" srcset="./images/img-4-mobile.webp, ./images/img-4-mobile@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(max-width: 1000px)" srcset="./images/img-4-mobile.png, ./images/img-4-mobile@2x.png 2x">
+                            <source srcset="./images/img-4.webp, ./images/img-4@2x.webp 2x" type="image/webp">
+                            <img src="./images/img-4.webp" srcset="./images/img-4@2x.webp 2x"
+                                alt="Через 7 рабочих дней после публикации мы начислим 30 ₽" loading="lazy"
+                                decoding="async">
+                        </picture>
+                    </div>
+                    <p class="instructions__text">Через 7 рабочих дней после публикации мы начислим 30&nbsp;₽</p>
                 </div>
             </div>
         </div>
@@ -52,7 +91,7 @@
     <section class="cta cta_top">
         <div class="container">
             <div class="cta__wrapper">
-                <h2 class="cta__title">Мы дорожим вашим мнением и ждём его!</h2>
+                <h2 class="cta__title h2-title">Мы дорожим вашим мнением и&nbsp;ждём его!</h2>
                 <button class="cta__button">Оставить отзыв</button>
             </div>
         </div>
@@ -60,22 +99,49 @@
 
     <section class="need">
         <div class="container">
-            <h2 class="need__title">Зачем нужны отзывы</h2>
+            <h2 class="need__title h2-title">Зачем нужны отзывы</h2>
             <div class="need__cards">
                 <div class="need__card">
-                    <div class="need__img"></div>
+                    <div class="need__img">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.80807 33.1662H4.5147C2.0213 33.1662 0 31.1514 0 28.6662V15.0345C0 12.5492 2.0213 10.5345 4.5147 10.5345H8.48541C9.39294 9.72747 10.7757 8.0597 11.2935 4.79127L11.5679 2.7575C11.6787 2.15946 11.9228 1.16045 12.8251 0.557272C13.7466 -0.0587087 14.8441 -0.0953749 15.7365 0.118158C16.6409 0.334582 17.5398 0.850092 18.1691 1.63344C19.1059 2.79962 19.4268 4.32534 19.5054 5.68802C19.5859 7.08447 19.4234 8.52827 19.2016 9.72849C19.195 9.76466 19.2306 9.91331 19.278 9.91919H30.6199C35.8194 9.91982 37.7496 16.4405 34.1716 19.3927C34.5363 21.2996 33.7938 23.2611 32.3233 24.4952C32.6931 26.4052 31.951 28.3715 30.4783 29.6081C31.1049 32.8281 28.4583 35.9961 25.0847 35.9997L16.5552 35.9998L16.4767 35.9998C15.0911 36.0012 13.8061 36.0024 12.4885 35.695C11.1536 35.3835 9.8654 34.7798 8.32629 33.7126L6.80807 33.1662ZM3.0098 15.0345C3.0098 14.2061 3.68356 13.5345 4.5147 13.5345H7.52174V30.1662H4.5147C3.68356 30.1662 3.0098 29.4946 3.0098 28.6662V15.0345ZM26.7483 18.7576C26.7483 17.9292 27.4221 17.2576 28.2532 17.2576L32.0007 17.2576C33.7752 16.0966 33.0377 12.9197 30.6198 12.9192L19.278 12.9192C17.2232 12.9192 15.9082 10.9892 16.2416 9.18504C16.4376 8.12476 16.5626 6.93617 16.5005 5.86011C16.4366 4.75027 16.185 3.96335 15.8196 3.50853C15.6508 3.29834 15.3583 3.11293 15.0339 3.0353C14.8254 2.98542 14.6813 2.99564 14.5954 3.01491L14.2664 5.25915C13.6283 9.28777 11.8607 11.5371 10.5315 12.7346V31.5754C11.6031 32.2649 12.4163 32.597 13.1745 32.7739C14.1169 32.9938 15.0656 33.001 16.5526 32.9997H25.0814C26.5322 32.9975 27.578 31.7347 27.5448 30.4854L24.3094 30.4854C23.4783 30.4854 22.8045 29.8138 22.8045 28.9854C22.8045 28.157 23.4783 27.4854 24.3094 27.4854L28.3081 27.4854C29.0364 27.0139 29.4404 26.1875 29.4015 25.3711L26.5863 25.3711C25.7552 25.3711 25.0814 24.6995 25.0814 23.8711C25.0814 23.0427 25.7552 22.3711 26.5863 22.3711L30.155 22.3711C30.8827 21.8995 31.2864 21.0736 31.2476 20.2576L28.2532 20.2576C27.4221 20.2576 26.7483 19.5861 26.7483 18.7576Z"
+                                fill="#6D778B" />
+                        </svg>
+                    </div>
                     <h4 class="need__subtitle">Помощь другим</h4>
                     <p class="need__text">Ваш отзыв может стать полезным ориентиром для тех, кто ищет качественный
                         продукт или сервис</p>
                 </div>
                 <div class="need__card">
-                    <div class="need__img"></div>
+                    <div class="need__img">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.3927 28.592C18.5266 28.1421 17.4957 28.1416 16.6292 28.5908L8.12223 33L9.75912 23.593C9.91818 22.6789 9.64534 21.7426 9.02012 21.0571L3.00006 14.4563L11.5298 13.1165C12.4873 12.9661 13.313 12.3624 13.7469 11.4958L18.0001 3L22.2532 11.4958C22.6871 12.3624 23.5129 12.9661 24.4703 13.1165L33 14.4563L26.98 21.0571C26.3548 21.7426 26.0819 22.6789 26.241 23.593L27.8779 33L19.3927 28.592ZM30.1877 21.9919C29.5625 22.6775 29.2897 23.6137 29.4487 24.5278L30.8335 32.4857C31.029 33.6094 30.5704 34.7468 29.6501 35.4206C28.7298 36.0944 27.5071 36.188 26.4949 35.6622L19.3911 31.9719C18.525 31.5219 17.4942 31.5215 16.6276 31.9706L9.50274 35.6635C8.49054 36.1881 7.26844 36.0937 6.34887 35.4197C5.4293 34.7458 4.9712 33.6089 5.16664 32.4857L6.55138 24.5278C6.71044 23.6137 6.4376 22.6775 5.81238 21.9919L0.783474 16.4779C0.0395219 15.6622 -0.196284 14.5038 0.169587 13.4621C0.535459 12.4205 1.44388 11.664 2.53452 11.4927L9.53858 10.3925C10.496 10.2421 11.3218 9.6384 11.7557 8.77177L15.3174 1.65703C15.8259 0.641408 16.8643 0 18.0001 0C19.1358 0 20.1742 0.641408 20.6827 1.65703L24.2444 8.77177C24.6783 9.6384 25.5041 10.2421 26.4615 10.3925L33.4656 11.4927C34.5562 11.664 35.4646 12.4205 35.8305 13.4621C36.1964 14.5038 35.9606 15.6622 35.2166 16.4779L30.1877 21.9919Z"
+                                fill="#6D778B" />
+                        </svg>
+                    </div>
                     <h4 class="need__subtitle">Улучшение качества</h4>
                     <p class="need__text">Конструктивная критика показывает проблемы, которые мы сможем решить,
                         а благодарность стимулирует работать безупречно.</p>
                 </div>
                 <div class="need__card">
-                    <div class="need__img"></div>
+                    <div class="need__img">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.6579 22.5603C12.3496 22.1044 13.2799 22.2955 13.7358 22.9872C13.9242 23.2731 14.2081 23.6525 14.5902 24.0298C15.3576 24.7876 16.4801 25.5 18 25.5C19.5199 25.5 20.6424 24.7876 21.4097 24.0298C21.7919 23.6525 22.0758 23.2731 22.2642 22.9872C22.7201 22.2955 23.6504 22.1044 24.3421 22.5603C25.0338 23.0161 25.225 23.9465 24.7691 24.6382C24.494 25.0555 24.0814 25.6078 23.5176 26.1645C22.3872 27.2807 20.5498 28.5 18 28.5C15.4502 28.5 13.6128 27.2807 12.4824 26.1645C11.9186 25.6078 11.5059 25.0555 11.2309 24.6382C10.775 23.9465 10.9662 23.0161 11.6579 22.5603Z"
+                                fill="#6D778B" />
+                            <path
+                                d="M13.091 12C14.4465 12 15.5455 13.2088 15.5455 14.7C15.5455 16.6412 13.9091 18.3 13.091 19.2C12.7509 19.5741 12.3578 19.9482 11.9117 20.3223C11.41 20.743 10.681 20.743 10.1793 20.3223C9.73319 19.9482 9.34008 19.5741 9 19.2C8.18184 18.3 6.54548 16.6412 6.54548 14.7C6.54548 13.2088 7.64443 12 9 12C9.85376 12 10.6057 12.4795 11.0455 13.207C11.4852 12.4795 12.2372 12 13.091 12Z"
+                                fill="#6D778B" />
+                            <path
+                                d="M27 12C28.3556 12 29.4545 13.2088 29.4545 14.7C29.4545 16.6412 27.8182 18.3 27 19.2C26.6599 19.5741 26.2668 19.9482 25.8207 20.3223C25.319 20.743 24.59 20.743 24.0883 20.3223C23.6422 19.9482 23.2491 19.5741 22.909 19.2C22.0909 18.3 20.4545 16.6412 20.4545 14.7C20.4545 13.2088 21.5535 12 22.909 12C23.7628 12 24.5148 12.4795 24.9545 13.207C25.3943 12.4795 26.1462 12 27 12Z"
+                                fill="#6D778B" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33ZM18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36Z"
+                                fill="#6D778B" />
+                        </svg>
+                    </div>
                     <h4 class="need__subtitle">Создание доверия</h4>
                     <p class="need__text">Оставляя отзыв, вы становитесь частью нашей дружной команды, ведь ваше мнение
                         помогает нам расти.</p>
@@ -86,7 +152,7 @@
 
     <section class="faq">
         <div class="container">
-            <h2 class="faq__title">Вопросы и ответы</h2>
+            <h2 class="faq__title h2-title">Вопросы и ответы</h2>
 
             <details>
                 <summary class="faq__subtitle">Кто может оставлять отзывы?</summary>
@@ -153,7 +219,7 @@
     <section class="cta cta_bottom">
         <div class="container">
             <div class="cta__wrapper">
-                <h2 class="cta__title">Мы дорожим вашим мнением и ждём его!</h2>
+                <h2 class="cta__title h2-title">Мы дорожим вашим мнением и ждём его!</h2>
                 <button class="cta__button">Оставить отзыв</button>
             </div>
         </div>

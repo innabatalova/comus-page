@@ -6,10 +6,13 @@ body {
     position: relative;
     min-width: 20rem;
     background-color: var(--primary-color);
+    margin: 0;
 }
 
 h1,
 h2,
+h4,
+h5,
 p,
 ul {
     margin: 0;
@@ -20,7 +23,255 @@ img {
     width: 100%;
 }
 
+section:not(.cta_bottom) {
+    margin-bottom: 1.5rem;
+}
+
 .container {
-    max-width: 20.4375rem;
+    max-width: 87.2%;
     margin: auto;
+}
+
+.h1-title {
+    font: var(--font-h1-mobile);
+    color: var(--primary-text);
+}
+
+.h2-title {
+    margin-bottom: .75rem;
+    font: var(--font-h2-mobile);
+    color: var(--primary-text);
+}
+
+.instructions__cards {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.instructions__card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.instructions__img {
+    position: relative;
+    width: 36.7%;
+    padding: .9375rem .625rem .3125rem 1.75rem;
+}
+
+.instructions__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--red-dark);
+    color: var(--white);
+}
+
+.instructions__pic,
+.instructions__pic img {
+    width: 5.125rem;
+    height: 5.5625rem;
+}
+
+.instructions__text {
+    display: flex;
+    align-items: center;
+    width: 60.86%;
+    font: var(--font-h5);
+    color: var(--primary-text);
+}
+
+.cta__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: .5rem;
+    background-color: var(--grey);
+}
+
+.cta__title {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.cta__button {
+    display: grid;
+    place-items: center;
+    height: 42px;
+    padding: .375rem;
+    border: 2px solid var(--red-dark);
+    outline: none;
+    border-radius: .375rem;
+    background-color: var(--red-dark);
+    color: var(--white);
+    font: var(--font-btn-mobile);
+    cursor: pointer;
+}
+
+.cta__button:hover {
+    background-color: #BC1B24;
+    border: 2px solid #BC1B24;
+}
+
+.cta__button:active {
+    background-color: #C53038;
+    border: 2px solid #C53038;
+}
+
+.cta__button:focus {
+    background-color: #C53038;
+    border: 2px solid #EA8D93;
+}
+
+.need__cards {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.need__card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background-color: var(--grey);
+}
+
+.need__img {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: .75rem;
+}
+
+.need__subtitle {
+    margin-bottom: .5rem;
+    font: var(--font-h4);
+    color: var(--primary-text);
+}
+
+.need__text {
+    font: var(--font-text-mobile);
+    color: var(--primary-text);
+}
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .container {
+        max-width: 61.5rem;
+    }
+
+    .instructions__cards {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .instructions__card {
+        flex-direction: column;
+        justify-content: normal;
+        gap: .75rem;
+    }
+
+    .instructions__number {
+        top: auto;
+        bottom: 0;
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+
+    .instructions__img {
+        padding: 0 4.0625rem 0 1.875rem;
+    }
+
+    .instructions__pic,
+    .instructions__pic img {
+        width: 8.3125rem;
+        height: auto;
+    }
+
+    .instructions__text {
+        max-width: 100%;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    section:not(.cta_bottom) {
+        margin-bottom: 3rem;
+    }
+
+    .h1-title {
+        font: var(--font-h1);
+    }
+
+    .h2-title {
+        margin-bottom: 1.5rem;
+        font: var(--font-h2);
+    }
+
+
+    .instructions__img {
+        width: 18%;
+    }
+
+    .instructions__text {
+        width: 80%;
+    }
+
+    .cta__wrapper {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .cta__title {
+        margin-bottom: 0;
+    }
+
+    .cta__button {
+        padding: .625rem 1.25rem;
+    }
+
+    .need__cards {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .need__card {
+        flex-grow: 1;
+        width: 20.93%;
+        padding: 1.5rem 1.5rem 2rem;
+    }
+
+    .need__img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .need__text {
+        line-height: 1.125rem;
+    }
+
+    .need__subtitle {
+        margin-bottom: .25rem;
+    }
+
+
 }
