@@ -22,8 +22,10 @@
     --font-h1-mobile: 700 1.375rem/1.875rem var(--primary-font);
     --font-h2-mobile: 700 1.125rem/1.5rem var(--primary-font);
 
+    --font-info-mobile: 400 .8125rem/.9375rem var(--secondary-font);
     --font-btn-mobile: 500 1rem/1.375rem var(--secondary-font);
     --font-text-mobile: 400 .875rem/1.25rem var(--secondary-font);
+    --font-popup-mobile: 500 1.125rem/1.375rem var(--secondary-font);
 }
 
 /* Шрифты */
