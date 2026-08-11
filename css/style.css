@@ -582,10 +582,14 @@ section:not(.cta_bottom) {
 
     /* Блок «popup» — на десктопе центрируется модальным окном */
     .popup {
+        top: 0;
+        bottom: auto;
+        height: 100%;
         align-items: center;
     }
 
     .popup__overlay {
+        top: 0;
         background-color: rgb(54 58 71 / 70%);
     }
 
